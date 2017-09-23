@@ -1,0 +1,15 @@
+<!-- Access data.flats with owner's name as key -->
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+<%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "img-circle" %>
+<p><%= flat.name %></p>
+<h1><%= flat.description %></h1>
+<p><%= flat.city_name %></p>
+
+<hr>
+
+<h2>Toilets comfort</h2>
+<% flat.toilets_comfort.times do %>
+<i class="fa fa-star" aria-hidden="true"></i>
+<% end %>
